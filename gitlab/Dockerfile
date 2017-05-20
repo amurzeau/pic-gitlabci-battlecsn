@@ -7,7 +7,7 @@ RUN bash -c 'mkdir -p /usr/share/man/man{1..8}' && \
   echo "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" >> /etc/apt/sources.list && \
   apt-get update && \
   apt-get install -y --no-install-recommends docker-ce && \
-  apt-get remove -y --purge prune wget gnupg apt-transport-https && \
+  apt-get purge -y wget gnupg apt-transport-https && \
   apt-get clean && \
   rm -rf /usr/share/man/* && \
   mkdir -p /data/db && \
