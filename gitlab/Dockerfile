@@ -10,7 +10,6 @@ RUN bash -c 'mkdir -p /usr/share/man/man{1..8}' && \
   apt-get purge -y wget gnupg apt-transport-https && \
   apt-get clean && \
   rm -rf /usr/share/man/* && \
-  mkdir -p /data/db && \
   echo '{ "allow_root": true }' > /root/.bowerrc
 
 ENV DOCKER_HOST="tcp://docker:2375"
