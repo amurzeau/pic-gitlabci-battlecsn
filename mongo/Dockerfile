@@ -7,6 +7,7 @@ RUN bash -c 'mkdir -p /usr/share/man/man{1..8}' && \
   apt-get update && \
   apt-get install -y --no-install-recommends mongodb && \
   apt-get clean && \
+  mkdir -p /data/db && \
   rm -rf /usr/share/man/*
 
 
