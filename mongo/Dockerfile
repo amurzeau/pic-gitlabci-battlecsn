@@ -1,7 +1,6 @@
 FROM debian:stretch-slim
 
-# Installation des dépendences
-# ****************************
+ENV MONGO_IN_MEMORY=0
 
 RUN bash -c 'mkdir -p /usr/share/man/man{1..8}' && \
   apt-get update && \
@@ -13,5 +12,7 @@ RUN bash -c 'mkdir -p /usr/share/man/man{1..8}' && \
 
 EXPOSE 27017 28017
 
-CMD [ "mongod" ]
+COPY run.sh run.sh
+
+CMD [ "./run.sh" ]
 
