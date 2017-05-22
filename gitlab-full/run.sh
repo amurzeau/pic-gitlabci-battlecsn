@@ -3,4 +3,4 @@
 mkdir -p /data/db
 
 /usr/bin/mongod &
-exec bin/catalina.sh run
+exec $(dirname "$0")/bin/catalina.sh run
