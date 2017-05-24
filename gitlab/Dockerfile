@@ -2,7 +2,7 @@ FROM debian:stretch-slim
 
 RUN bash -c 'mkdir -p /usr/share/man/man{1..8}' && \
   apt-get update && \
-  apt-get install -y --no-install-recommends openjdk-8-jdk-headless maven tree git bzip2 wget gnupg apt-transport-https && \
+  apt-get install -y --no-install-recommends openjdk-8-jdk-headless maven tree git bzip2 xsltproc wget gnupg apt-transport-https && \
   wget -qO - https://download.docker.com/linux/debian/gpg | apt-key add - && \
   echo "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" >> /etc/apt/sources.list && \
   apt-get update && \
